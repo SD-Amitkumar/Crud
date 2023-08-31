@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>StudentManagement software</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" 
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+crossorigin="anonymous">
+</head>
+
+
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Student management Software</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link"  th:href="@{/get}">LIST OF Students</a>
+      </li>
+     
+    
+    </ul>
+  </div>
+</nav>
+
+
+<div class = "container">
+<div  class = " row">
+<div class = "col-lg-6 col-sm-6  container justiify-content-centre card">
+
+<h1 class = "text centre"> Create new student </h1>
+<div class = "card body">
+<form  th:action="@{/student}"  th:object= "${student}"  method = "post">  
+
+<div class = "form-group">
+
+<label> Student first name</label>
+<input 
+type="text"
+Name = "firstName"
+th:filed= "*{firstName}"
+placeholder = "Enter your first name ">
+</div>
+<div class = "form-group">
+
+<label> Student Last name</label>
+<input 
+type="text"
+Name = "lastName"
+th:filed= "*{lastName}"
+placeholder = "Enter your last name ">
+</div>
+<div class = "form-group">
+
+<label> Student email</label>
+<input 
+type="text"
+Name = "email"
+th:filed= "*{email}" 
+placeholder = "Enter your email ">
+</div>
+<div class = "box-footer">
+<button  type="submit" class="btn btn-primary" >Submitt</button>
+
+
+ </div>
+
+
+</form>
+
+ </div>
+
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
