@@ -75,4 +75,4 @@ License
 This project is licensed under the MIT License.
 
 Contact
-For any questions or inquiries, feel free to reach out via email: your.email@example.com
+For any questions or inquiries, feel free to reach out via email:kumar930amit@gmail.com
